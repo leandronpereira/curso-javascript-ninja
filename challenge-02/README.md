@@ -108,5 +108,21 @@ return total;
 
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+
+resultado(1);
+// Quando a função recebe um argumento, ela retorna o próprio argumento.
+
+resultado (1,2);
+// Quando a função recebe dois argumentos, ela retorna a soma entre eles.
+
+resultado (1,2,3);
+// Quando a função recebe três argumentos, ela retorna a soma entre os dois primeiros, dividido pelo terceiro.
+
+resultado (1,2,3,4);
+// Quando a função recebe quatro argumentos ou mais, ela retorna "null".
+
+resultado();
+// Quando a função não recebe argumentos, ela retorna "false".
+
+
 ```
