@@ -6,7 +6,7 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
 
 function soma(x,y) {
-return x + y;
+  return x + y;
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
@@ -28,8 +28,8 @@ Onde VALOR é o novo valor da variável.
 */
 
 function mudavalor(z){
-nada = z;
-return "O valor da variável agora é "+z+"."
+  nada = z;
+  return "O valor da variável agora é "+z+"."
 }
 
 // Invoque a função criada acima.
@@ -50,10 +50,10 @@ Crie uma função com as seguintes características:
 */
 
 function multiplica(a,b,c){
-if (a === undefined || b === undefined || c === undefined) {
-return "Preencha todos os valores corretamente!";
+  if (a === undefined || b === undefined || c === undefined) {
+  return "Preencha todos os valores corretamente!";
 } else {
-return (a*b*c + 2);
+  return (a*b*c + 2);
 }
 }
 
@@ -85,26 +85,26 @@ Crie uma função com as seguintes características:
 
 function resultado(x,y,z,w) {
 
-var total = false;
+  var total = false;
 
-if (x !== undefined) {
-total = x;
-}
+  if (x !== undefined) {
+  total = x;
+  }
 
-if (y !== undefined) {
-total += y;
-}
+  if (y !== undefined) {
+  total += y;
+  }
 
-if(z !== undefined) {
-total /= z;
-}
+  if(z !== undefined) {
+  total /= z;
+  }
 
-if (w !== undefined) {
-total = null;
-}
+  if (w !== undefined) {
+  total = null;
+  }
 
-return total;
-}
+  return total;
+  }
 
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
