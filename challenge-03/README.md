@@ -106,7 +106,7 @@ Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
 
-pessoa.nomeCompleto(); //Leandro Pereira
+pessoa.nomeCompleto(); //"Olá! Meu nome é Leandro Pereira!"
 
 
 /*
@@ -114,21 +114,21 @@ Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
 
-pessoa.idade; //32
+pessoa.mostrarIdade(); // "Olá! eu tenho 32 anos!"
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
 
-pessoa.peso; //93
+pessoa.mostrarPeso(); // "Eu peso 93Kg."
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
 
-pessoa.altura; //1.71
+pessoa.mostrarAltura(); // "Minha altura é 1.71m."
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
@@ -144,7 +144,7 @@ comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
 
-pessoa.idade; //35
+pessoa.mostraIdade(); // "Olá! eu tenho 35 anos!"
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
