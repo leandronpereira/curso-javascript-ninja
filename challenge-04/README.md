@@ -1,6 +1,6 @@
 # Desafio da semana #4
 
-```js
+js
 /*
 Declare uma variável chamada `isTruthy`, e atribua a ela uma função que recebe
 um único parâmetro como argumento. Essa função deve retornar `true` se o
@@ -9,12 +9,8 @@ para o contrário.
 */
 
 var isTruthy = function(valor){
-if( valor ){
-return true;
-} else {
-return false;
-}
-}
+return !!valor;
+};
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 ?
@@ -148,7 +144,25 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+
+carro.addPessoas = function (n){
+var frase;
+var a = carro.assentos
+var q = carro.quantidadePessoas;
+if ( a === q) {
+frase = "O carro já está lotado!";
+} else if ( q + n > a) { 
+if ( a - q === 1) {
+frase = "Só cabe mais 1 pessoa!”;
+} else {
+frase = "Só cabem mais “ + (a - q) + “ pessoas!”;
+}
+} else {
+carro.quantidadePessoas += n;
+frase = “Já temos “ + (q + n) + “ pessoas no carro!"
+}
+return frase;
+}
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
@@ -182,20 +196,25 @@ carro.obterCor();
 carro.obterMarcaModelo();
 
 // Adicione 2 pessoas no carro.
-?
+
+carro.addPessoas(2);
 
 // Adicione mais 4 pessoas no carro.
-?
+
+carro.addPessoas(4)
 
 // Faça o carro encher.
-?
+
+carro.addPessoas(
+carro.assentos - carro.quantidadePessoas);
+
 
 // Tire 4 pessoas do carro.
-?
+carro.addPessoas(-4)
 
 // Adicione 10 pessoas no carro.
-?
+carro.addPessoas(10);
 
 // Quantas pessoas temos no carro?
-?
-```
+
+carro.quantidadePessoas
