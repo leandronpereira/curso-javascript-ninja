@@ -70,14 +70,14 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 */
 
 var carro = { 
-marca: “Hyundai”,
-modelo: “HB20S”,
-placa: “IXO-6636”,
+marca: "Hyundai",
+modelo: "HB20S",
+placa: "IXO-6636",
 ano: 2017,
-cor: “branco”,
+cor: "branco",
 quantasPortas: 4,
 assentos: 5,
-quantidadePessoas: 0;
+quantidadePessoas: 0
 }
 
 
@@ -105,7 +105,7 @@ return carro.cor;
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
 
-carro.obterCor = function(){
+carro.obterModelo = function(){
 return carro.modelo;
 }
 
@@ -123,9 +123,8 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 
-carro.obterMarcaModelo =
-function() { 
-return “Esse carro é um “ + carro.obterMarca() + “ “ + carro.obterModelo() +”.”;
+carro.obterMarcaModelo = function() { 
+return "Esse carro é um " + carro.obterMarca() + " " + carro.obterModelo() +".";
 }
 
 /*
@@ -149,18 +148,31 @@ carro.addPessoas = function (n){
 var frase;
 var a = carro.assentos
 var q = carro.quantidadePessoas;
-if ( a === q) {
+
+
+if (n === 0 ) {
+return "Insira um número válido";
+}
+
+
+
+if ( a === q && n > 0) {
 frase = "O carro já está lotado!";
-} else if ( q + n > a) { 
+}
+else if ( q + n > a) { 
+
 if ( a - q === 1) {
-frase = "Só cabe mais 1 pessoa!”;
+frase = "Só cabe mais 1 pessoa!";
 } else {
-frase = "Só cabem mais “ + (a - q) + “ pessoas!”;
+
+frase = "Só cabem mais " + (a - q) + " pessoas!";
 }
 } else {
+
 carro.quantidadePessoas += n;
-frase = “Já temos “ + (q + n) + “ pessoas no carro!"
+frase = "Já temos " + (q + n) + " pessoas no carro!"
 }
+
 return frase;
 }
 
@@ -177,7 +189,7 @@ carro.obterCor();
 
 // Mude a cor do carro para vermelho.
 
-carro.mudaCor(“vermelho”);
+carro.mudaCor("vermelho");
 
 // E agora, qual a cor do carro?
 
@@ -185,7 +197,7 @@ carro.obterCor();
 
 // Mude a cor do carro para verde musgo.
 
-carro.mudaCor(“verde musgo”);
+carro.mudaCor("verde musgo");
 
 // E agora, qual a cor do carro?
 
@@ -210,7 +222,7 @@ carro.assentos - carro.quantidadePessoas);
 
 
 // Tire 4 pessoas do carro.
-carro.addPessoas(-4)
+  carro.addPessoas(-4)
 
 // Adicione 10 pessoas no carro.
 carro.addPessoas(10);
