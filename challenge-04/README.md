@@ -145,35 +145,49 @@ citado acima, no lugar de "pessoas".
 */
 
 carro.addPessoas = function (n){
-var frase;
+var s = "s";
 var a = carro.assentos
 var q = carro.quantidadePessoas;
 
-
-if (n === 0 ) {
-return "Insira um número válido";
+if(isNaN(n * 1)){
+return "Inserir valor numérico!";
 }
 
+if (n === 0 ) {
+return "Insira um número válido!";
+}
 
+if ( n + q < 0 ){
+return "A quantidade de pessoas não pode ficar negativa! =(";
+}
 
 if ( a === q && n > 0) {
-frase = "O carro já está lotado!";
+return "O carro já está lotado!";
 }
 else if ( q + n > a) { 
 
 if ( a - q === 1) {
-frase = "Só cabe mais 1 pessoa!";
+return "Só cabe mais 1 pessoa!";
 } else {
 
-frase = "Só cabem mais " + (a - q) + " pessoas!";
+return "Só cabem mais " + (a - q) + " pessoas!";
 }
+
 } else {
 
 carro.quantidadePessoas += n;
-frase = "Já temos " + (q + n) + " pessoas no carro!"
+
+if (carro.quantidadePessoas === 0) {
+return "O carro agora está vazio!";
 }
 
-return frase;
+if (carro.quantidadePessoas === 1){
+s = "";
+}
+
+return "Já temos " + (q + n) + " pessoa" + s + " no carro!";
+}
+
 }
 
 /*
